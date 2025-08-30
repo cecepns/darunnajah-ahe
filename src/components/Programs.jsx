@@ -182,7 +182,7 @@ const Programs = () => {
                   <img 
                     src={program.image} 
                     alt={program.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-6">
