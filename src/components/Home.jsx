@@ -6,6 +6,7 @@ import Header from './Header';
 import Hero from './Hero';
 import Programs from './Programs';
 import WhyChooseUs from './WhyChooseUs';
+import Testimonial from './Testimonial';
 import Contact from './Contact';
 import Footer from './Footer';
 
@@ -24,6 +25,7 @@ const Home = () => {
       <Hero />
       <Programs />
       <WhyChooseUs />
+      <Testimonial />
       <Contact />
       <Footer />
     </div>

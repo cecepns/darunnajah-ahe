@@ -60,7 +60,7 @@ const Hero = () => {
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
                   <Users className="w-8 h-8 text-blue-600" />
                 </div>
-                <p className="text-2xl font-bold text-gray-800">500+</p>
+                <p className="text-2xl font-bold text-gray-800">25</p>
                 <p className="text-sm text-gray-600">Siswa Aktif</p>
               </div>
               <div className="text-center" data-aos="fade-up" data-aos-delay="300">
@@ -74,7 +74,7 @@ const Hero = () => {
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
                   <Award className="w-8 h-8 text-green-600" />
                 </div>
-                <p className="text-2xl font-bold text-gray-800">5+</p>
+                <p className="text-2xl font-bold text-gray-800">2</p>
                 <p className="text-sm text-gray-600">Tahun Pengalaman</p>
               </div>
               <div className="text-center" data-aos="fade-up" data-aos-delay="500">

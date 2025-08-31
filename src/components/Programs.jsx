@@ -5,6 +5,7 @@ import ahe from '../assets/les/logo-les-ahe.png';
 import matematika from '../assets/les/logo-les-matematika.png';
 import english from '../assets/les/logo-les-english.png';
 import mapel from '../assets/les/logo-les-mapel-sd.png';
+import mengaji from '../assets/les/logo-les-mengaji.jpeg';
 
 const Programs = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -63,11 +64,11 @@ const Programs = () => {
       color: 'from-blue-400 to-blue-600',
       image: ahe,
       details: {
-        fullDescription: 'Les Baca AHE adalah program khusus untuk anak usia 4–6 tahun yang dirancang sebagai langkah awal sebelum masuk SD. Anak diajak belajar membaca, menulis secara menyenangkan lewat permainan.',
+        fullDescription: 'Les Baca AHE adalah program khusus untuk anak usia 4–13 tahun yang dirancang untuk mengembangkan kemampuan membaca dan menulis. Anak diajak belajar membaca, menulis secara menyenangkan lewat permainan.',
         targetAge: [
-          'Anak usia 4–6 tahun',
+          'Anak usia 4–13 tahun',
           'Anak TK A & TK B',
-          'Anak yang akan masuk SD tahun depan',
+          'Anak SD kelas 1-6',
           'Anak yang belum mengenal huruf dan angka'
         ]
       }
@@ -141,14 +142,34 @@ const Programs = () => {
         subject: 'Mapel SD/MI'
       }
     },
-    // {
-    //   id: 'ngaji',
-    //   title: 'LES NGAJI',
-    //   subtitle: 'Bonus Program',
-    //   description: 'Program bonus mengaji untuk melengkapi pendidikan spiritual anak-anak',
-    //   color: 'from-teal-400 to-cyan-600',
-    //   image: ahe,
-    // }
+    {
+      id: 'ngaji',
+      title: 'LES NGAJI',
+      subtitle: 'Les Mengaji',
+      description: "Belajar mengaji dengan menggunakan Metode Ummi, Iqro', Juz 'Ama, dan Al-Qur'an. Disertai dengan tahfidz. Fokus pada bacaan secara tartil dan sesuai dengan kaidah tahsin. Metode dan prinsip untuk memperbaiki dan memperindah bacaan Al-Qur'an dengan fokus pada ketepatan makhraj dan sifat huruf, serta penerapan hukum tajwid yang benar agar sesuai dengan bacaan.",
+      color: 'from-teal-400 to-cyan-600',
+      image: mengaji,
+      details: {
+        fullDescription: "Program LES NGAJI adalah program bonus yang dirancang untuk mengajarkan anak membaca Al-Qur'an dengan benar. Menggunakan metode Ummi, Iqro', Juz 'Ama, dan Al-Qur'an yang disertai dengan tahfidz. Program ini fokus pada bacaan secara tartil dan sesuai dengan kaidah tahsin untuk memperbaiki dan memperindah bacaan Al-Qur'an.",
+        benefits: [
+          'Belajar membaca Al-Qur\'an dengan metode yang teruji',
+          'Memahami hukum tajwid dan makhraj huruf dengan benar',
+          'Menguasai teknik bacaan tartil yang indah',
+          'Menghafal Al-Qur\'an (tahfidz) secara bertahap',
+          'Membangun fondasi keagamaan yang kuat sejak dini'
+        ],
+        method: 'Menggunakan kombinasi metode Ummi, Iqro\', Juz \'Ama, dan Al-Qur\'an dengan pendekatan yang menyenangkan dan sesuai dengan kemampuan anak. Fokus pada ketepatan makhraj dan sifat huruf, serta penerapan hukum tajwid yang benar.',
+        duration: '30-45 menit/sesi',
+        frequency: '2-3 kali seminggu',
+        targetAge: [
+          'Anak usia 4-12 tahun',
+          'Anak yang ingin belajar mengaji dari dasar',
+          'Anak yang ingin memperbaiki bacaan Al-Qur\'an',
+          'Anak yang ingin menghafal Al-Qur\'an'
+        ],
+        focus: 'Tahsin, Tajwid, Tahfidz, dan Tartil'
+      }
+    }
   ];
 
   const openModal = (program) => {
