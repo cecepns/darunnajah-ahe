@@ -131,7 +131,7 @@ const TentangKami = () => {
                 <button 
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   onClick={() => {
-                    const phoneNumber = '085219570532';
+                    const phoneNumber = '6285219570532';
                     const message = 'Halo, saya tertarik dengan program belajar di AHe. Bisa info lebih lanjut?';
                     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                     window.open(whatsappUrl, '_blank');

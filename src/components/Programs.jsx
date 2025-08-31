@@ -76,7 +76,7 @@ const Programs = () => {
       id: 'matematika',
       title: 'MATEMATIKA SERIES',
       subtitle: 'Program Bertahap',
-      description: 'Program matematika bertahap yang menumbuhkan logika dan rasa percaya diri, dirancang untuk anak TK yang belum bisa membaca, yang sudah lancar membaca, SD kelas 1 sampai kelas 6.',
+      description: 'Program matematika bertahap yang menumbuhkan logika dan rasa percaya diri, dirancang untuk anak SD kelas 1 sampai kelas 6.',
       color: 'from-green-400 to-emerald-600',
       image: matematika,
       details: {
