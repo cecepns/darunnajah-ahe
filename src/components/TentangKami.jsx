@@ -7,6 +7,9 @@ import logoAhe from '../assets/logo-asyik-belajar-bareng-ahe.jpeg';
 
 const TentangKami = () => {
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+    
     AOS.init({
       duration: 1000,
       once: true,
