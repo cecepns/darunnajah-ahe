@@ -26,8 +26,8 @@ const Contact = () => {
   ];
 
   const schedule = [
-    { day: 'Selasa, Rabu, Jumat', time: '13:00 - 18:00' },
-    { day: 'Sabtu dan Minggu', time: '08:00 - 18:00' }
+    // { day: 'Selasa, Rabu, Jumat', time: '13:00 - 18:00' },
+    { day: 'Senin - Minggu', time: '08:00 - 18:00' }
   ];
 
   const allPrograms = [
