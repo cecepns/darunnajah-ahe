@@ -35,9 +35,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Kontak</h4>
             <div className="space-y-3 text-gray-400">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400" />
-                <span>085219570532</span>
+              <div className="flex items-start space-x-3">
+                <Phone className="w-5 h-5 text-blue-400 mt-0.5 shrink-0" />
+                <div>
+                  <p>0821-6267-6622 (Eln Deriyanti, S.Si)</p>
+                  <p>0821-5111-1535 (Pausi, S.Ag)</p>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />

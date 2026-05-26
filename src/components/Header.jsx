@@ -51,8 +51,11 @@ const Header = () => {
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm">
-              <Phone className="w-4 h-4 text-blue-600" />
-              <span className="text-gray-700">085219570532</span>
+              <Phone className="w-4 h-4 text-blue-600 shrink-0" />
+              <div className="text-gray-700">
+                <span className="block">0821-6267-6622</span>
+                <span className="block">0821-5111-1535</span>
+              </div>
             </div>
             <div className="flex items-center space-x-2 text-sm">
               <Mail className="w-4 h-4 text-blue-600" />

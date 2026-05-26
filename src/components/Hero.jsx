@@ -1,12 +1,10 @@
 import { BookOpen, Star, Users, Award } from 'lucide-react';
-import LogoAhe from '../assets/les/logo-les-ahe.png'
+import LogoAhe from '../assets/les/logo-les-ahe.png';
+import { WHATSAPP_CONTACTS, openWhatsApp } from '../constants/contact';
 
 const Hero = () => {
   const handleWhatsAppRedirect = (message) => {
-    const phoneNumber = '6285219570532';
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
+    openWhatsApp(WHATSAPP_CONTACTS[0].waNumber, message);
   };
 
   const handleDaftarSekarang = () => {

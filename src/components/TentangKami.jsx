@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import Header from './Header';
 import Footer from './Footer';
 import logoAhe from '../assets/logo-asyik-belajar-bareng-ahe.jpeg';
+import { WHATSAPP_CONTACTS, DEFAULT_WHATSAPP_MESSAGE, openWhatsApp } from '../constants/contact';
 
 const TentangKami = () => {
   useEffect(() => {
@@ -133,12 +134,7 @@ const TentangKami = () => {
                 </p>
                 <button 
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                  onClick={() => {
-                    const phoneNumber = '6285219570532';
-                    const message = 'Halo, saya tertarik dengan program belajar di AHe. Bisa info lebih lanjut?';
-                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                    window.open(whatsappUrl, '_blank');
-                  }}
+                  onClick={() => openWhatsApp(WHATSAPP_CONTACTS[0].waNumber, DEFAULT_WHATSAPP_MESSAGE)}
                 >
                   Hubungi Kami
                 </button>

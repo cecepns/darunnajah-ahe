@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { WHATSAPP_CONTACTS, openWhatsApp } from '../constants/contact';
 
 import pracalis from '../assets/les/logo-les-pracalis.png';
 import ahe from '../assets/les/logo-les-ahe.png';
@@ -10,22 +11,18 @@ import mengaji from '../assets/les/logo-les-mengaji.jpeg';
 const Programs = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
 
-  // WhatsApp redirect functions
   const redirectToWhatsApp = (action, program) => {
-    const phoneNumber = '6281234567890'; // Replace with actual WhatsApp number
     const programName = program.title;
     const programSubtitle = program.subtitle;
-    
+
     let message = '';
     if (action === 'daftar') {
       message = `Halo! Saya tertarik untuk mendaftar program ${programName} (${programSubtitle}). Mohon informasi lebih lanjut mengenai pendaftaran dan jadwal yang tersedia. Terima kasih!`;
     } else if (action === 'tanya') {
       message = `Halo! Saya ingin bertanya tentang program ${programName} (${programSubtitle}). Mohon informasi detail mengenai program ini. Terima kasih!`;
     }
-    
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
+
+    openWhatsApp(WHATSAPP_CONTACTS[0].waNumber, message);
   };
 
   const programs = [

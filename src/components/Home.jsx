@@ -7,6 +7,8 @@ import Hero from './Hero';
 import Programs from './Programs';
 import WhyChooseUs from './WhyChooseUs';
 import Testimonial from './Testimonial';
+import ParentTestimonial from './ParentTestimonial';
+import StudentsGallery from './StudentsGallery';
 import Contact from './Contact';
 import Footer from './Footer';
 
@@ -25,7 +27,9 @@ const Home = () => {
       <Hero />
       <Programs />
       <WhyChooseUs />
+      <ParentTestimonial />
       <Testimonial />
+      <StudentsGallery />
       <Contact />
       <Footer />
     </div>
