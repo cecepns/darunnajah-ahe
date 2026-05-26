@@ -11,6 +11,12 @@ import testimonial7 from '../assets/testimonial/7.jpeg';
 import testimonial8 from '../assets/testimonial/8.jpeg';
 import testimonial9 from '../assets/testimonial/9.jpeg';
 import testimonial10 from '../assets/testimonial/10.jpeg';
+import siswa1 from '../assets/siswa/1.png';
+import siswa2 from '../assets/siswa/2.png';
+import siswa3 from '../assets/siswa/3.png';
+import siswa4 from '../assets/siswa/4.png';
+import siswa5 from '../assets/siswa/5.png';
+import siswa6 from '../assets/siswa/6.png';
 
 const Testimonial = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -26,6 +32,12 @@ const Testimonial = () => {
     { id: 8, image: testimonial8 },
     { id: 9, image: testimonial9 },
     { id: 10, image: testimonial10 },
+    { id: 11, image: siswa1 },
+    { id: 12, image: siswa2 },
+    { id: 13, image: siswa3 },
+    { id: 14, image: siswa4 },
+    { id: 15, image: siswa5 },
+    { id: 16, image: siswa6 },
   ];
 
   const openModal = (image) => {
