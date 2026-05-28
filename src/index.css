@@ -42,3 +42,19 @@ html {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Testimonial Swiper Pagination */
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  opacity: 1;
+  background: #93c5fd;
+  transition: all 0.2s ease;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  width: 22px;
+  border-radius: 9999px;
+  background: #f59e0b;
+}
+

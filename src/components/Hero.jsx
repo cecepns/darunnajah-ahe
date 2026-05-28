@@ -1,5 +1,5 @@
 import { BookOpen, Star, Users, Award } from 'lucide-react';
-import LogoAhe from '../assets/les/logo-les-ahe.png';
+import LogoAhe from '../assets/logo.png';
 import { WHATSAPP_CONTACTS, openWhatsApp } from '../constants/contact';
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="pt-44 bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen flex items-center">
+    <section id="home" className="pt-44 bg-gradient-to-br from-yellow-50 via-white to-blue-50 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -24,8 +24,8 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 leading-tight">
                 Selamat Datang di
-                <span className="text-blue-600 block">RBN - Rumah Belajar</span>
-                <span className="text-purple-600">Darunnajah AHE</span>
+                <span className="text-blue-700 block">RBN - Rumah Belajar</span>
+                <span className="text-yellow-500">Darunnajah AHE</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 font-medium">
                 Asyiknya belajar BACA Bersama DARUNNAJAH AHE
@@ -40,13 +40,13 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={handleDaftarSekarang}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Daftar Sekarang
               </button>
               <button 
                 onClick={handleTanyaProgram}
-                className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300"
+                className="border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300"
               >
                 Tanya Program
               </button>
@@ -62,8 +62,8 @@ const Hero = () => {
                 <p className="text-sm text-gray-600">Siswa Aktif</p>
               </div>
               <div className="text-center" data-aos="fade-up" data-aos-delay="300">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <BookOpen className="w-8 h-8 text-purple-600" />
+                <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <BookOpen className="w-8 h-8 text-yellow-600" />
                 </div>
                 <p className="text-2xl font-bold text-gray-800">6</p>
                 <p className="text-sm text-gray-600">Program Les</p>
@@ -87,13 +87,13 @@ const Hero = () => {
 
           {/* Right Content - Hero Image */}
           <div className="relative" data-aos="fade-left" data-aos-duration="1000">
-            <div className="relative bg-gradient-to-br from-blue-400 to-purple-500 rounded-3xl p-8 shadow-2xl">
+            <div className="relative bg-gradient-to-br from-blue-500 to-yellow-400 rounded-3xl p-8 shadow-2xl">
               <div className="bg-white rounded-2xl p-6 space-y-4">
                 <div className="flex flex-col gap-5 items-center justify-center space-x-4 mb-6">
                   <img 
                     src={LogoAhe}
                     alt="Logo AHE" 
-                    className="h-full w-44 object-cover"
+                    className="h-full w-44 object-cover rounded-xl"
                   />
                   <div className="text-center">
                     <h3 className="text-xl font-bold text-gray-800">AHE Method</h3>
@@ -112,7 +112,7 @@ const Hero = () => {
                 <div className="absolute -top-4 -right-4 bg-yellow-400 rounded-full p-3 shadow-lg animate-bounce">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-pink-400 rounded-full p-3 shadow-lg animate-pulse">
+                <div className="absolute -bottom-4 -left-4 bg-blue-500 rounded-full p-3 shadow-lg animate-pulse">
                   <Star className="w-6 h-6 text-white" />
                 </div>
               </div>

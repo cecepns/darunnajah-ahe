@@ -24,7 +24,7 @@ const Header = () => {
             <img 
               src={Logo}
               alt="Logo AHE" 
-              className="h-20 w-24 rounded object-cover cursor-pointer"
+              className="h-full w-24 rounded object-cover cursor-pointer"
             />
             {/* <div>
               <h1 className="text-xl font-bold text-blue-800">Rumah Belajar</h1>

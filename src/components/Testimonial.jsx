@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 // Import testimonial images
 import testimonial1 from '../assets/testimonial/1.jpeg';
@@ -20,6 +25,7 @@ import siswa6 from '../assets/siswa/6.png';
 
 const Testimonial = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   const testimonials = [
     { id: 1, image: testimonial1 },
@@ -49,7 +55,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gradient-to-b from-white to-yellow-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
@@ -61,33 +67,65 @@ const Testimonial = () => {
           </p>
         </div>
 
-        {/* Testimonial Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.id}
-              className="group cursor-pointer transform transition-all duration-300 hover:scale-105"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              onClick={() => openModal(testimonial.image)}
-            >
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img
-                  src={testimonial.image}
-                  alt={`Testimoni ${testimonial.id}`}
-                  className="w-full h-64 object-cover group-hover:brightness-110 transition-all duration-300"
-                />
-                <div className="p-4">
-                  <h3 className="font-semibold text-gray-800 text-center">
-                    Testimoni #{testimonial.id}
-                  </h3>
-                  <p className="text-sm text-gray-600 text-center mt-1">
-                    Klik untuk melihat detail
-                  </p>
+        <div data-aos="fade-up" className="relative">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop
+            autoplay={{ delay: 2800, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            onSwiper={setSwiperInstance}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            className="testimonial-swiper pb-12 px-2"
+          >
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
+                <div
+                  className="group cursor-pointer transform transition-all duration-300 hover:scale-105"
+                  onClick={() => openModal(testimonial.image)}
+                >
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-yellow-100">
+                    <img
+                      src={testimonial.image}
+                      alt={`Testimoni ${testimonial.id}`}
+                      className="w-full h-64 object-cover group-hover:brightness-110 transition-all duration-300"
+                    />
+                    <div className="p-4">
+                      <h3 className="font-semibold text-gray-800 text-center">
+                        Testimoni #{testimonial.id}
+                      </h3>
+                      <p className="text-sm text-gray-600 text-center mt-1">
+                        Klik untuk melihat detail
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="pointer-events-none absolute inset-y-0 left-0 right-0 z-20 flex items-center justify-between px-1 sm:px-2">
+            <button
+              type="button"
+              onClick={() => swiperInstance?.slidePrev()}
+              className="pointer-events-auto w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/95 border border-blue-200 text-blue-700 shadow-md hover:bg-yellow-100 transition-colors flex items-center justify-center"
+              aria-label="Sebelumnya"
+            >
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => swiperInstance?.slideNext()}
+              className="pointer-events-auto w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/95 border border-blue-200 text-blue-700 shadow-md hover:bg-yellow-100 transition-colors flex items-center justify-center"
+              aria-label="Berikutnya"
+            >
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Modal for full-size image */}
